@@ -14,8 +14,8 @@
         "upstream_version: \"(?<currentValue>.*?)\"\\n",
         "ARG UPSTREAM_VERSION=(?<currentValue>.*?)\\n"
       ],
-      "depNameTemplate": "n8n-io/n8n",
-      "datasourceTemplate": "github-releases"
+      "depNameTemplate": "n8nio/n8n",
+      "datasourceTemplate": "docker"
     }
   ]
 }
