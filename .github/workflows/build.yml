@@ -1,0 +1,21 @@
+name: Build and Publish Docker
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-publish:
+    uses: halkeye/halkeye/.github/workflows/build-upstream-docker.yaml@master
+    secrets: inherit
+    permissions:
+      contents: write
+      packages: write
+    with:
+      upstream_version: "v1.69.2"
+      upstream_repo: "https://github.com/n8n-io/n8n"
+      run_number: "${{ github.run_number }}"
+      username: "${{ github.repository_owner }}"
+      repository: "${{ github.repository }}"
