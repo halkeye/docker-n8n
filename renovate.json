@@ -7,21 +7,11 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "Dockerfile"
-      ],
-      "matchStrings": [
-        "_VERSION=\"(?<currentValue>.+?)\" # repo: (?<depName>.*)"
-      ],
-      "datasourceTemplate": "github-releases"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": [
         "^.github/workflows/build.yml$",
         "^Dockerfile$"
       ],
       "matchStrings": [
-        "upstream_version: \"v(?<currentValue>.*?)\"\\n",
+        "upstream_version: \"(?<currentValue>.*?)\"\\n",
         "ARG UPSTREAM_VERSION=(?<currentValue>.*?)\\n"
       ],
       "depNameTemplate": "n8nio/n8n",
