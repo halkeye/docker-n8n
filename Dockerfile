@@ -2,7 +2,7 @@ ARG UPSTREAM_VERSION=1.70.1
 FROM n8nio/n8n:$UPSTREAM_VERSION
 
 WORKDIR /home/node/.n8n/nodes
-RUN npm install \
+RUN pnpm install \
   n8n-nodes-document-generator@1.0.9 \
   n8n-nodes-jwt@0.2.0 \
   n8n-nodes-webpage-content-extractor@0.1.2 \
