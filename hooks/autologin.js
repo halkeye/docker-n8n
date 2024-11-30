@@ -66,8 +66,12 @@ module.exports = {
               end: false,
             },
             async (req, res, next) => {
+              console.log(
+                "X-authentik-email",
+                req.headers?.["x-authentik-email"],
+              );
               if (!req.cookies?.["n8n-auth"]) {
-                const owner = await Container.get(UserRepository).findOne({
+                const owner = await this.dbCollections.User.findOne({
                   where: { role: "global:owner" },
                 });
                 issueCookie(res, owner);
