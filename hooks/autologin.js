@@ -72,7 +72,7 @@ module.exports = {
                   email: email,
                   firstName: email,
                   lastName: email,
-                  role: !owner ? "global:member" : "global:owner",
+                  role: owner ? "global:member" : "global:owner",
                   password: await passwordUtility.hash(randomPassword),
                 }).then((resp) => resp.user);
               }
