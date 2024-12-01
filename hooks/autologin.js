@@ -4,9 +4,6 @@ const Layer = require("express/lib/router/layer");
 const { Container } = require("typedi");
 const { randomString } = require("n8n-workflow");
 
-const { issueCookie } = require(
-  resolve(dirname(require.resolve("n8n")), "auth/jwt"),
-);
 const { AuthService } = require(
   resolve(dirname(require.resolve("n8n")), "auth/auth.service"),
 );
