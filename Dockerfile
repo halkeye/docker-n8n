@@ -12,6 +12,7 @@ RUN pnpm install \
   @muench-dev/n8n-nodes-bluesky@2.2.0
 
 WORKDIR /home/node/.n8n/hooks/
+ENV N8N_FORWARD_AUTH_HEADER=x-authentik-email
 ENV EXTERNAL_HOOK_FILES=/home/node/.n8n/hooks/autologin.js
 COPY hooks/ /home/node/.n8n/hooks/
 
