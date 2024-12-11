@@ -14,7 +14,7 @@ jobs:
       contents: write
       packages: write
     with:
-      upstream_version: "1.71.2"
+      upstream_version: "1.72.0"
       upstream_repo: "https://github.com/n8n-io/n8n"
       run_number: "${{ github.run_number }}"
       username: "${{ github.repository_owner }}"
