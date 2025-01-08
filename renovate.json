@@ -17,5 +17,16 @@
       "depNameTemplate": "n8nio/n8n",
       "datasourceTemplate": "docker"
     }
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "automerge": true
+    }
   ]
 }
